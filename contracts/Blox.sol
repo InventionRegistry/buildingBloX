@@ -4,13 +4,13 @@ contract Blox {
   uint public total = 0;
 
   // add invention
-  function put(string hash) returns (bool success){
+  function put(string hash) returns (bool success) {
     if (inventions[hash] == 0){
       inventions[hash] = msg.sender;
       total += 1;
       success = true;
     }
-	  else
+    else
       success = false;
   }
 
